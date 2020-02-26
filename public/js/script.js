@@ -1,5 +1,10 @@
 (function($){
     $(document).ready(function(){
+
+        $('.img-popup').magnificPopup({delegate: 'a',type:'image', gallery:{enabled:true}});
+
+
+
         $('.slider').slick({
             dots: true,
             infinite: false,
