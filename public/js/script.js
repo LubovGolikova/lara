@@ -86,7 +86,13 @@
             $('.modal-body').html(result);
             $('#exampleModal').modal();
         }
+        $('body').on('click', 'td .edit-order', function(e){
+            e.preventDefault();
 
+            $('td .edit-order span').toggle();
+
+            $('.hidden').toggleClass('d-none')
+        })
 
 
 

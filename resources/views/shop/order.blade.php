@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="box-main pb-3">
+<div class="container">
+    <div class="search-line py-3 fluid container d-flex flex-row justify-content-center align-items-center">
+    <form class="my-2 my-lg-0 col-lg-6  search form-inline" method="get" action="/search">
+        <input class="form-control mr-sm-2" name="s"  autocomplete="off" contenteditable="true" spellcheck="false" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-green my-2 my-sm-0" type="submit">Найти</button>
+    </form>
+    </div>
+<div class="container main-bg pb-4">
     <h1>Оформление заказа</h1>
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-md-6">
             <form method="POST" action="/order/add">
             @csrf
             <div class="form-group row">
@@ -52,14 +61,17 @@
                   </label>
                 </div>
                 <br>
-                <button class="btn btn-success my-2 my-sm-0">Оформить заказ</button>
+                <button class="btn btn-buy my-2">Оформить заказ</button>
 
             </form>
             <br>
         </div>
-        <div class="col">
-        @include('shop.box')
+        <div class="col-md-5 offset-1 order-box py-3">
+            @include('shop.box-mini')
         </div>
     </div>
+</div>
+</div>
+</div>
 </div>
 @endsection

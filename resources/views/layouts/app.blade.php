@@ -22,7 +22,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto align-items-center">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">О нас <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -40,7 +40,7 @@
                 <a class="nav-link" href="#">Растения </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="/shop">Магазин </a>
+                <a class="nav-link  {!!Request::is('shop') ? 'active' : '' !!}" href="/shop">Магазин </a>
             </li>
             <li class="nav-item">
                <div class="box">
@@ -61,25 +61,12 @@
 
 @yield('content')
 
-<footer class="footer-color d-flex flex-row justify-content-center align-items-center">
-        <div class="col-3">
-        <h3>О нас</h3>
-        </div>
-        <div class="col-3">
-         <h3>Магазин</h3>
-        </div>
-        <div class="col-3">
-         <h3>Контакты</h3>
-        </div>
-</footer>
-
-
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog  modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h4 class="modal-title" id="exampleModalLabel">Ваша корзина</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -88,12 +75,26 @@
         @include('shop.box')
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-default remove-all">Очистить корзину</button>
+        <div>
+            <a href="/shop"class="btn btn-pink mr-2">Продолжить покупки</a>
+            <a href="/order" class="btn btn-buy">Оформить заказ</a>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
+
+
+<footer class="box-3 d-flex flex-row justify-content-center align-items-center py-4">
+    <a href="">О нас</a>
+    <a href="">Растения</a>
+    <a href="">Контакты</a>
+    <a href="">Услуги</a>
+    <a href="/shop" {!!Request::is('shop') ? 'class="active"' : ''!!}>Магазин</a>
+
+</footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
