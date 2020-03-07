@@ -73,8 +73,64 @@ footer a:hover, footer a.active{
 
     border: 1px #404f6e solid;
 }
+.page-link {
+    position: relative;
+    display: block;
+    padding: $pagination-padding-y $pagination-padding-x;
+    margin-left: -$pagination-border-width;
+    line-height: $pagination-line-height;
+    color: transparent;
+    background-color: transparent;
+    border: none;
 
+&:hover {
+     z-index: 2;
+     color: $pagination-hover-color;
+     text-decoration: none;
+     background-color: $pagination-hover-bg;
+     border-color: $pagination-hover-border-color;
+ }
 
+&:focus {
+     z-index: 2;
+     outline: $pagination-focus-outline;
+     box-shadow: $pagination-focus-box-shadow;
+ }
+}
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: transparent;
+    border-color: #dee2e6;
+}
+.page-item.disabled .page-link.prev:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+.page-item.disabled .page-link.next:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent  transparent transparent #fff;
+}
+
+.page-item .page-link.prev:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent #404f6e transparent transparent;
+}
+
+.page-item .page-link.next:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent  transparent transparent #404f6e;
+}
 .navbar-brand {
     padding-left: 8px;
 }
@@ -404,8 +460,19 @@ a{
 }
 .price{
     font-family: "Codec Cold Trial News";
+
 }
 .price span{
+    font-weight: 700;
+    font-family: "Arial Narrow";
+    font-size: 22px;
+}
+.price-flower{
+    font-family: "Codec Cold Trial News";
+    margin-left: 230px;
+
+}
+.price-flower span{
     font-weight: 700;
     font-family: "Arial Narrow";
     font-size: 22px;
@@ -484,13 +551,19 @@ a{
     padding-bottom: 0;
     margin: 0;
 }
-
+.img-popup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .thumbnails img{
    width: 100px;
 }
 .thumbnails a{
     margin-bottom: 5px;
 }
+
+
 html,
 body {
     height: 100%;

@@ -11,7 +11,7 @@
     </div>
 <div class="container main-bg">
         <h1>Магазин</h1>
-        <div class="row flowers">
+        <div class="row flowers ">
         @foreach($flowers as $flower)
             <div class="col-md-3">
                 <a href="/flower/{{$flower->id}}" class="border-circle">
@@ -26,10 +26,11 @@
                 <br>
             </div>
          @endforeach
+
         </div>
 
         {{$flowers->links()}}
-
+  <br>
 </div>
 </div>
 </div>

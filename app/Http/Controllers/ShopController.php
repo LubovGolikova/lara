@@ -8,7 +8,7 @@ use App\Flower;
 class ShopController extends Controller
 {
     function index(){
-        $flowers = Flower::paginate(12);
+        $flowers = Flower::simplePaginate(7);
         return view('shop.index', compact('flowers'));
     }
     function showProduct($id){
