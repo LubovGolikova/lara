@@ -73,29 +73,13 @@ footer a:hover, footer a.active{
 
     border: 1px #404f6e solid;
 }
-.page-link {
-    position: relative;
-    display: block;
-    padding: $pagination-padding-y $pagination-padding-x;
-    margin-left: -$pagination-border-width;
-    line-height: $pagination-line-height;
-    color: transparent;
-    background-color: transparent;
-    border: none;
-
-&:hover {
-     z-index: 2;
-     color: $pagination-hover-color;
-     text-decoration: none;
-     background-color: $pagination-hover-bg;
-     border-color: $pagination-hover-border-color;
- }
-
-&:focus {
-     z-index: 2;
-     outline: $pagination-focus-outline;
-     box-shadow: $pagination-focus-box-shadow;
- }
+.page-link{
+    background: transparent;
+    outline: none;
+    border: none
+}
+.page-link:hover{
+    background: transparent;
 }
 .page-item.disabled .page-link {
     color: #6c757d;
@@ -111,6 +95,7 @@ footer a:hover, footer a.active{
     border-color: transparent #fff transparent transparent;
 }
 
+
 .page-item.disabled .page-link.next:before{
     content:'';
     display: block;
@@ -122,14 +107,23 @@ footer a:hover, footer a.active{
     content:'';
     display: block;
     border: 20px solid;
-    border-color: transparent #404f6e transparent transparent;
+    border-color: transparent #d7659f transparent transparent;
 }
+.page-item .page-link.prev:hover:before{
+     border-color: transparent #404f6e transparent transparent;
+ }
 
+.page-link:focus{
+    box-shadow: none;
+}
 .page-item .page-link.next:before{
     content:'';
     display: block;
     border: 20px solid;
-    border-color: transparent  transparent transparent #404f6e;
+    border-color: transparent  transparent transparent #d7659f;
+}
+.page-item .page-link.next:hover:before {
+    border-color: transparent transparent transparent #404f6e;
 }
 .navbar-brand {
     padding-left: 8px;
@@ -146,8 +140,15 @@ footer a:hover, footer a.active{
 }
 
 .btn-outline-green {
+    color: #ffffff;
+    border-color: #669894;
+    background: #669894;
+}
+
+.btn-outline-green:hover {
     color: #669894;
     border-color: #669894;
+    background: transparent;
 }
 
 .btn-primary{
@@ -157,7 +158,7 @@ footer a:hover, footer a.active{
     border-color: #669894;
 
 }
-.btn-outline-green:hover, .btn-primary:hover, .btn-buy:hover, .btn-pink:hover{
+ .btn-primary:hover, .btn-buy:hover, .btn-pink:hover{
     background: #669894;
     color: #fff
 }
@@ -580,6 +581,140 @@ body {
 
 footer {
     flex: 0 0 auto;
-
-
 }
+.navbar-brand{
+    display: none
+}
+.nav-item .box{
+    margin-top: 10px;
+}
+.nav-item .box a{
+    position: relative;
+}
+.nav-item .box a .count-products{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffcd94;
+    color: #d7669e;
+    font-size: 11px;
+    bottom: -9px;
+    right: -12px;
+    line-height: normal;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        display: block
+    }
+    .nav-item.mx-5{
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .welcome .text span:nth-child(1){
+        font-size: 26px;
+        letter-spacing: 38px;
+    }
+    .welcome .text span:nth-child(2){
+        font-size: 86px;
+    }
+
+
+    .welcome .text span:nth-child(3) {
+        font-size: 24px;
+        letter-spacing: 17px;
+    }
+    .welcome .text span:nth-child(4) {
+        font-size: 67.647px;
+        position: relative;
+        top: -51px;
+        right: -44px;
+    }
+    .welcome .text {
+        position: absolute;
+        top: 21px;
+        left: 26px;
+    }
+}
+
+
+
+
+
+@media (max-width: 576px) {
+    .welcome .text span:nth-child(1){
+        font-size: 15px;
+        letter-spacing: 17px;
+    }
+    .welcome .text span:nth-child(2){
+        font-size: 37px;
+    }
+
+
+    .welcome .text span:nth-child(3) {
+        font-size: 14px;
+    }
+    .welcome .text span:nth-child(4) {
+        font-size: 49.647px;
+        position: relative;
+        top: -28px;
+        right: -92px;
+    }
+    .welcome .text {
+        top: 5px;
+        left: 12px;
+    }
+    .price-flower{
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 400px){
+    .form-inline, .form-inline *{
+        display: block;
+        margin: 2px !important;
+        width: 100% !important;
+    }
+    .form-inline button{
+
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+

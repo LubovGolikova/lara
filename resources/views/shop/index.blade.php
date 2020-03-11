@@ -3,12 +3,12 @@
 @section('content')
 <div class="box-main pb-3">
 <div class="container">
-    <div class="search-line py-3 fluid container d-flex flex-row justify-content-center align-items-center">
-    <form class="my-2 my-lg-0 col-lg-6  search form-inline" method="get" action="/search">
-        <input class="form-control mr-sm-2" name="s"  autocomplete="off" contenteditable="true" spellcheck="false" type="search" placeholder="Поиск" aria-label="Search">
-        <button class="btn btn-outline-green my-2 my-sm-0" type="submit">Найти</button>
-    </form>
-    </div>
+     <div class="search-line py-3 fluid container d-flex flex-row justify-content-center align-items-center">
+        <form class="my-2 my-lg-0 col-12 col-lg-6  search form-inline  p-0" method="get" action="/search">
+            <input class="form-control mr-sm-2" name="s"  autocomplete="off" contenteditable="true" spellcheck="false" type="search" placeholder="Поиск" aria-label="Search">
+            <button class="btn btn-outline-green my-2 my-sm-0" type="submit">Найти</button>
+        </form>
+        </div>
 <div class="container main-bg">
         <h1>Магазин</h1>
         <div class="row flowers ">

@@ -4,7 +4,7 @@
 <section class="box-1 pb-3">
     <div class="container">
     <div class="search-line py-3 fluid container d-flex flex-row justify-content-center align-items-center">
-    <form class="my-2 my-lg-0 col-lg-6  search form-inline" method="get" action="/search">
+    <form class="my-2 my-lg-0 col-12 col-lg-6  search form-inline  p-0" method="get" action="/search">
         <input class="form-control mr-sm-2" name="s"  autocomplete="off" contenteditable="true" spellcheck="false" type="search" placeholder="Поиск" aria-label="Search">
         <button class="btn btn-outline-green my-2 my-sm-0" type="submit">Найти</button>
     </form>
@@ -24,7 +24,7 @@
              <img src="{{asset('assets/flowers-box-2.png')}}" alt=""/>
         </div>
         <div class="col-md-7 content">
-            <h3 class="text-center mb-5"> О нас </h3>
+            <h3 class="text-center mb-5 mt-3 mt-md-0"> О нас </h3>
             Рада приветствовать всех кто заглянул на наш сайт! Это небольшой магазин лилейников. Лилейник-это цветок, который цветет один день, но когда куст разростается этого недостаткам вы не заметите, ведь он весь будет покрыт бутонами и вы будете в течение долгого времени созерцать прекрасное цветение!
             Здесь вы найдете лилейник на любой вкус! У нас представлены как зарегестрированные сорта так и сеянцы, которые были выведены гибридизаторами-любителями, но не были зарегестрированы, такие лилейники стоят намного дешевле, однако это никак не умоляет их красоты!
             Покупая здесь лилейники вы получите хороший посадочный материал! Сортность и качество гарантирую! Желаю вам приятных покупок!
