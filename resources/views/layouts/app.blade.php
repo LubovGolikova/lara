@@ -50,7 +50,7 @@
                <div class="box">
                        <a href="#" data-toggle="modal" data-target="#exampleModal">
                        <img src="{{asset('assets/shopping-cart.png')}}" alt=""/>
-                       <span class="count-products">1</span>
+                       <span class="count-products"> {{count(session('box'))}}</span>
                        </a>
                     </div>
             </li>
