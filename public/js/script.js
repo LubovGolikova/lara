@@ -3,8 +3,6 @@
 
         $('.img-popup').magnificPopup({delegate: 'a',type:'image', gallery:{enabled:true}});
 
-
-
         $('.slider').slick({
             dots: true,
             infinite: false,
@@ -35,9 +33,6 @@
                         slidesToScroll: 1
                     }
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
         });
 
@@ -93,10 +88,46 @@
 
             $('.hidden').toggleClass('d-none')
         })
+        $('nova-post-city').select2();
+        $('nova-post-warehouses').select2();
+        $('nova-post-courier-city').select2();
+        $('nova-post-street').select2();
+        $('number-house').select2();
+        $('number-flat').select2();
+        $('post-index').select2();
+        $('.nova-post-city').change(function(){
+            let value = $(this).find('option:selected').val();
+            $.ajax({
+                url: '/get-warehouses',
+                type: 'POST',
+                data: {city_id: value},
+                dataType: 'json',
+                success:function(result) {
+                    let str = '<option>Выберите отделение*</option>';
+                    for(let i=0; i<result.length; i++) {
+                        str+=`<option>${result[i]['DescriptionRu']}</option>`;
+                    }
+                    $('.nova-post-warehouses').html(str);
+                }
+            });
+        });
 
-
-
-
+        $('.nova-post-courier-city').change(function(){
+            let value = $(this).find('option:selected').val();
+            $.ajax({
+                url: 'get-streets',
+                type: 'POST',
+                data: {city_id: value},
+                dataType: 'json',
+                success: function(result) {
+                    let str = '<option>Выберите улицу*</option>';
+                    for(let i=0; i<result.length; i++) {
+                        str+=`<option>${result[i]['Description']}</option>`;
+                    }
+                    $('.nova-post-street').html(str);
+                }
+            });
+        });
 
     });
 })(jQuery)
