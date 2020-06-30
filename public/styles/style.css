@@ -1,68 +1,114 @@
 @font-face {
     font-family: "VivaldiD CL";
-    src: url("../assets/fonts/VIVADCL_.TTF") format("ttf")
+    src: url("../assets/fonts2/VIVADCL_.TTF") format("ttf")
 }
 @font-face {
     font-family: "Arial Narrow";
-    src: url("../assets/fonts/6428.ttf") format("ttf")
+    src: url("../assets/fonts2/6428.ttf") format("ttf")
 }
 @font-face {
     font-family: "Arial";
-    src: url("../assets/fonts/9041.ttf") format("ttf")
+    src: url("../assets/fonts2/9041.ttf") format("ttf")
 }
 @font-face {
     font-family: "Codec Cold Trial News";
-    src: url("../assets/fonts/Codec-Cold-News-trial.ttf") format("ttf")
+    src: url("../assets/fonts2/Codec-Cold-News-trial.ttf") format("ttf")
 }
 @font-face {
     font-family: 'Codec Cold News Italic';
     font-style: normal;
     font-weight: normal;
-    src: local('Codec Cold News Italic'), url('../assets/fonts/codec/Codec-Cold-News-Italic-trial.woff') format('woff');
+    src: local('Codec Cold News Italic'), url('../assets/fonts2/codec/Codec-Cold-News-Italic-trial.woff') format('woff');
 }
 @font-face {
     font-family: 'Codec Cold Trial News';
     font-style: normal;
     font-weight: normal;
-    src: local('Codec Cold Trial News'), url('../assets/fonts/codec/Codec-Cold-News-trial.woff') format('woff');
+    src: local('Codec Cold Trial News'), url('../assets/fonts2/codec/Codec-Cold-News-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Codec Cold Heavy Trial';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Codec Cold Heavy Trial'), url('../assets/fonts2/codec/Codec-Cold-Heavy-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Codec Cold Trial Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Codec Cold Trial Bold'), url('../assets/fonts2/codec/Codec-Cold-Bold-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Codec Cold Heavy Trial';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Codec Cold Heavy Trial'), url('../assets/fonts2/codec/Codec-Cold-Heavy-trial.woff') format('woff');
+}
+body{
+    background: url("../assets/background.jpg") fixed;
+    background-size: cover;
 }
 img{
     max-width: 100%;
 }
-body{
-
-}
 .base-color{
     background-color: #A3819C;
-}
-footer a{
-    margin: 0 20px;
-    color: #d7659f;
-    font-family: 'Codec Cold Trial News';
-}
-.modal-footer{
-    justify-content: space-between;
-    border: none
-}
-footer a:hover, footer a.active{
-    text-decoration: none;
-    font-weight: 700;
-    color: #d7659f;
+    border-radius: 10px;
 }
 
-
-.bg-light{
-    background-color: #d7659f !important;
+.figure{
+    margin-left: auto;
+    display: inline-block;
+}
+.box-news .figure{
+    margin-left: auto;
+    display: inline-block;
+}
+.footer-color{
+    background-color: #A3819C !important;
     position: relative;
-    padding: 1rem 1rem;
+    padding: 1.5rem 1.5rem;
 }
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
 
-    color: rgba(255,255,255,1);
+#footerId .nav-link {
+    display: block;
+    padding: 1.5rem 3rem;
+}
+.footer-link{
+    display: flex;
+    font-size: 20px;
+    margin-left: 60px;
+}
+.bg-light{
+    background-color: #A3819C !important;
+    position: relative;
+    padding: 1.5rem 1.5rem;
+}
+.footer-nv .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+
+    color: #E9E1CE;
+}
+.box a{
+    margin: 12px 23px;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    height: 30px;
+    line-height: 27px;
+    box-sizing: border-box;
+}
+.box a:hover{
+    color:#fff !important;
+    background: transparent;
+    border: 1px #fff solid;
 }
 .research{
     display: flex;
     flex-direction: row;
+}
+.search-line {
+    margin-bottom: 1rem!important;
+    width: auto;
 }
 .search input{
     padding-right: 40px;
@@ -73,162 +119,58 @@ footer a:hover, footer a.active{
 
     border: 1px #404f6e solid;
 }
-.page-link{
-    background: transparent;
-    outline: none;
-    border: none
-}
-.page-link:hover{
-    background: transparent;
-}
-.page-item.disabled .page-link {
-    color: #6c757d;
-    pointer-events: none;
-    cursor: auto;
-    background-color: transparent;
-    border-color: #dee2e6;
-}
-.page-item.disabled .page-link.prev:before{
-    content:'';
-    display: block;
-    border: 20px solid;
-    border-color: transparent #fff transparent transparent;
-}
-
-
-.page-item.disabled .page-link.next:before{
-    content:'';
-    display: block;
-    border: 20px solid;
-    border-color: transparent  transparent transparent #fff;
-}
-
-.page-item .page-link.prev:before{
-    content:'';
-    display: block;
-    border: 20px solid;
-    border-color: transparent #d7659f transparent transparent;
-}
-.page-item .page-link.prev:hover:before{
-     border-color: transparent #404f6e transparent transparent;
- }
-
-.page-link:focus{
-    box-shadow: none;
-}
-.page-item .page-link.next:before{
-    content:'';
-    display: block;
-    border: 20px solid;
-    border-color: transparent  transparent transparent #d7659f;
-}
-.page-item .page-link.next:hover:before {
-    border-color: transparent transparent transparent #404f6e;
-}
-.navbar-brand {
-    padding-left: 8px;
-}
-.search{
-    position: relative;
-}
-.search i{
-    position: absolute;
-    top: 8px;
-    right: 26px;
-    color: rgba(255,255,255,.25);
-    font-size: 20px;
-}
-
-.btn-outline-green {
-    color: #ffffff;
-    border-color: #669894;
-    background: #669894;
-}
-
-.btn-outline-green:hover {
-    color: #669894;
-    border-color: #669894;
-    background: transparent;
-}
-
-.btn-primary{
-    background: #669894;
-    color: #fff;
-    font-family: "Arial";
-    border-color: #669894;
-
-}
- .btn-primary:hover, .btn-buy:hover, .btn-pink:hover{
-    background: #669894;
-    color: #fff
-}
-.btn-outline-green:focus, .btn-primary:focus,
-.btn-primary:not(:disabled):not(.disabled):active, .btn-buy:focus, .btn-pink:focus{
-    background: #669894;
-    color: #fff;
-    box-shadow: none;
-    outline: none;
-}
-.form-inline .form-control:focus {
-    background: rgba(255,255,255,1);
-}
-
 .form-inline .form-control {
     display: inline-block;
     vertical-align: middle;
     width: auto;
     border-radius: 10px;
-    background: rgba(255,255,255,0.8);
+    background: #fff;
     font-size: 18px;
     color: #666;
     outline: 0;
     margin: 11px 0;
-    border: 1px #fff solid!important;
+    border: inherit!important;
 }
-@media (min-width: 576px) {
-    .form-inline .form-control {
-        display: inline-block;
-        width: 100%;
-        vertical-align: middle;
-    }
-}
-@media (min-width: 576px) {
-    .mr-sm-2, .mx-sm-2 {
-        margin-right: .5rem !important;
-    }
-
-}
-
 .form-inline {
     flex-flow: row;
     width: 100%;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 22px;
 }
 .navbar-light .navbar-nav .nav-link {
     color: rgba(255,255,255,.7);
 }
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-    color: rgba(255,255,255,1);
+    color: rgba(255,255,255,.7);
 }
 .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
-
-    color: rgba(255,255,255,1);
-
+    color: rgba(255,255,255,.7);
 }
-
+.navbar-light .navbar-brand {
+    color: rgba(255,255,255,1);
+    font-family: 'Lobster', cursive;
+    padding-left: 45px;
+}
 h5 {
     font-family: 'Lobster', cursive;
-    color: white;
+    color:#E9E1CE;
     font-size: xx-large;
 }
 .about {
     background: #333;
-    color: #ffffff;
+    color: #E9E1CE;
     padding: 20px;
 }
 .about h3 {
     margin-bottom: 10px;
     padding: 10px;
-    border-bottom: 1px #ffffff solid;
+    border-bottom: 1px #E9E1CE solid;
+}
+.about p{
+    color: #E9E1CE;
 }
 .flowers img {
     border-radius: 50%;
@@ -236,14 +178,33 @@ h5 {
 }
 .flowers  div {
     text-align: center;
+    cursor: pointer;
 }
 a{
     color: #fff;
 }
-.navbar-expand-lg .navbar-nav .nav-link{
-    padding-right: 1rem;
-    padding-left: 1rem;
-    font-size: 22px;
+.navbar-light:before{
+    content: '';
+    display: block;
+    height: 10px;
+    border-top: 3px #E9E1CE solid;
+    border-bottom: 1px #E9E1CE solid;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: 0;
+
+}
+.navbar-light:after{
+    content: '';
+    display: block;
+    height: 10px;
+    border-bottom: 3px #E9E1CE solid;
+    border-top: 1px #E9E1CE solid;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
 }
 .social a{
     margin: 0 3px;
@@ -263,308 +224,44 @@ a{
     background: transparent;
     border: 1px #fff solid;
 }
-.box a{
-    margin: 0 6px;
-    width: 30px;
-    display: inline-block;
-    text-align: center;
-    height: 30px;
-    line-height: 27px;
-    box-sizing: border-box;
-}
-.box a:hover{
-    color:#fff !important;
-    background: transparent;
-    border: 1px #fff solid;
-}
-.box-1{
-    background: url(../assets/bg-box-1.jpg);
-    background-size: cover;
-}
+
 .welcome{
     position: relative;
 }
 .welcome img{
-    border: 2px #d7659f solid;
-    width: 100%;
+    margin-left: 20px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border: 2px #E9E1CE solid;
+    width: 97%;
+
 }
+
 .welcome .text{
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 230px;
+    left: 80px;
+    font-size: 72px;
+    font-family: "VivaldiD CL";
+    color: #E9E1CE;
+    text-shadow: 0px 0px 15px rgba(0,0,0,0.5);
 }
 .welcome .text span{
     display: block;
 }
-.welcome .text span:nth-child(1){
-    font-size: 35px;
-    font-family: "Codec Cold Trial News", serif;
-    color: rgb(132, 220, 224);
-    text-transform: uppercase;
-    line-height: 1.2;
-    letter-spacing: 38px;
-}
+
 .welcome .text span:nth-child(2){
-    font-size: 100px;
-    font-family: "Codec Cold Trial News";
-    color: rgb(132, 220, 224);
-    text-transform: uppercase;
-    line-height: 1.2;
+    color: #c937ac;
 }
-.welcome .text span:nth-child(3){
-    font-size: 30px;
-    font-family: "Codec Cold Trial News";
-    color: rgb(132, 220, 224);
-    text-transform: uppercase;
-    line-height: 1.2;
-    letter-spacing: 17px;
+.box-new-flowers{
+    margin-left: 20px;
+    margin-right: 15px;
 }
-.welcome .text span:nth-child(4){
-    font-size: 70.647px;
-    font-family: "Mistral";
-    color: rgb(255, 210, 215);
-    line-height: 1.2;
-    position: relative;
-    top: -45px;
-    text-align: right;
-    right: -26px;
+.box-news{
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
-
-
-.box-2, .box-3{
-    background: #ffd2d7 url(../assets/bg-box-2.jpg) repeat-y 100% 0;
-    text-align: justify;
-    font-size: 14px;
-}
-.box-2 .container{
-     position: relative;
- }
-
-.box-2 .container:before{
-    content: '';
-    display: block;
-    background: #fff;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: -100%;
-}
-.box-2 .content{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-}
-.box-2 h3{
-    font-family: "Codec Cold Trial News";
-    font-weight: 700;
-}
-
-.box-3 .category{
-    padding: 5px;
-    width: 50%;
-    position: relative;
-}
-.box-3 .category img{
-    width: 100%;
-}
-.box-3 .category:before{
-    content: '';
-    display: block;
-    width: 84%;
-    height: 84%;
-    border: 3px #ffd2d7 solid ;
-    position: absolute;
-    top: 8%;
-    left: 8%;
-}
-.box-3 .category:hover:before{
-    border: none;
-    background: rgba(255, 210, 215, 0.8);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 70%;
-}
-.box-3 .category:nth-child(1):hover:before {
-    background-image: url(../assets/summer.png);
-
-}
-.box-3 .category:nth-child(2):hover:before {
-    background-image: url(../assets/spring.png);
-}
-.box-3 .category:nth-child(3):hover:before {
-    background-image: url(../assets/fall.png);
-}
-.box-3 .category:nth-child(4):hover:before {
-    background-image: url(../assets/winter.png);
-}
-
-
-.box-main{
-    background: url(../assets/bg.jpg);
-    background-size: cover;
-}
-.box-main .main-bg{
-    background: #ffd2d7;
-    border-radius: 10px;
-}
-
-.main-bg h1{
-    text-align: center;
-    color: #d7659f;
-    padding: 40px 0;
-    font-family: "Mistral";
-    text-transform: uppercase;
-}
-
-.modal h4{
-    color: #d7659f;
-    font-family: "Mistral";
-    font-size: 32px;
-}
-.close span {
-    color: #d7659f;
-    opacity: 1;
-}
-.border-circle{
-    position: relative;
-    display: inline-block;
-}
-.border-circle:before {
-    content: '';
-    display: block;
-    width: 96%;
-    height: 96%;
-    border: 3px #ffd2d7 solid;
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    border-radius: 50%;
-}
-.flowers .title{
-    margin-top: 10px
-}
-.flowers .title a{
-    color: #000;
-    font-family: "Codec Cold Trial News";
-    font-weight: 700;
-}
-.flowers .in-stock, .product .in-stock{
-    color: #d7659f;
-    font-family: "Codec Cold Trial News";
-    font-size: 14px;
-}
-.flowers .out-stock{
-    color: #777;
-    font-family: "Codec Cold Trial News";
-    font-size: 14px;
-}
-.price{
-    font-family: "Codec Cold Trial News";
-
-}
-.price span{
-    font-weight: 700;
-    font-family: "Arial Narrow";
-    font-size: 22px;
-}
-.price-flower{
-    font-family: "Codec Cold Trial News";
-    margin-left: 230px;
-
-}
-.price-flower span{
-    font-weight: 700;
-    font-family: "Arial Narrow";
-    font-size: 22px;
-}
-
-.btn-buy, .btn-pink{
-    background: #fed38e;
-    box-shadow: 2px 3px 3px 1px #d7659f;
-    border: none;
-    color: #000;
-    font-family: "Codec Cold Trial News";
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 10px;
-}
-.modal-footer .btn-buy, .modal-footer .btn-pink{
-    text-transform: none;
-}
-
-.btn-pink{
-    background: #ffd2d7;
-}
-.remove-all{
-    color: #cf3723;
-    text-decoration: underline;
-}
-.remove-all:hover{
-    color: #f00;
-    text-decoration: none;
-}
-
-.modal-header{
-    border-bottom: none;
-}
-.modal-body table.table td{
-    vertical-align: middle;
-}
-
-.table td, .table thead th {
-    border-bottom: 1px solid #ffd2d7;
-    border-top: 1px solid #ffd2d7;
-}
-.table tfoot td{
-    border: none;
-    color: #d7659f;
-}
-.order-box{
-    box-shadow: 2px 3px 3px 1px #d7659f;
-    background: #fff;
-    border-radius: 10px;
-
-}
-.order-box .table td{
-    border: none
-}
-.order-box .table tfoot td{
-    border-top: 1px solid #ffd2d7;
-    color: #000;
-    font-size: 1.2em;
-}
-
-.edit-order{
-    color:#d65f53;
-    border-bottom: 1px #d65f53 dashed;
-}
-.edit-order:hover, .edit-order:active  {
-    color: #f00;
-    text-decoration: none;
-}
-
-.product h1{
-    color: #000;
-    font-family: "Codec Cold Trial News";
-    font-weight: 700;
-    text-transform: none;
-    padding-bottom: 0;
-    margin: 0;
-}
-.img-popup{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.thumbnails img{
-   width: 100px;
-}
-.thumbnails a{
-    margin-bottom: 5px;
-}
-
-
 html,
 body {
     height: 100%;
@@ -582,139 +279,169 @@ body {
 footer {
     flex: 0 0 auto;
 }
-.navbar-brand{
-    display: none
+
+.container-news{
+    padding-top: 15px;
+    border-bottom: 1px #E9E1CE solid;
 }
-.nav-item .box{
-    margin-top: 10px;
-}
-.nav-item .box a{
+.container-news img{
+    width: 80px;
     position: relative;
+    justify-content: flex-end;
+
 }
-.nav-item .box a .count-products{
+.container-care-title{
+    padding-top: 15px;
+    border-bottom: 1px #E9E1CE solid;
+ }
+.container-care-title img{
+    margin-top: 35px;
+    width: 55px;
+    position: relative;
+    justify-content: flex-end;
+}
+.container-care-title p{
+    margin-bottom: 10px;
+    padding: 35px 35px 35px 20px;
+    color:#E9E1CE;
+    font-size: xx-large;
+}
+.container-news p {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 35px 35px 35px 20px;
+    color:#E9E1CE;
+    font-size: xx-large;
+}
+.container-care{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.gardening{
+    display: flex;
+    flex-direction: row;
+    padding: 25px;
+}
+.gardening p{
+    color:#E9E1CE;
+    font-size: 16px;
+    padding: 20px 5px 0px 20px;
+}
+.gardening h3{
+    color:#E9E1CE;
+    font-size: 20px;
+    padding: 5px 5px 0px 20px;
+}
+.gardening img{
+    border: 2px #E9E1CE solid;
+}
+
+.border-circle{
+    position: relative;
+    display: inline-block;
+}
+.border-circle:before {
+    content: '';
+    display: block;
+    width: 96%;
+    height: 96%;
+    border: 3px #E9E1CE solid;
     position: absolute;
-    width: 16px;
-    height: 16px;
+    top: 2%;
+    left: 2%;
     border-radius: 50%;
-    background: #ffcd94;
-    color: #d7669e;
-    font-size: 11px;
-    bottom: -9px;
-    right: -12px;
-    line-height: normal;
-    font-weight: 700;
+}
+.flowers .slider{
+    margin-top: 35px;
+}
+
+/*///footer*/
+
+.footer-light:after {
+    content: '';
+    display: block;
+    height: 10px;
+    border-bottom: 3px #E9E1CE solid;
+    border-top: 1px #E9E1CE solid;
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
+
+.footer-light:before {
+    content: '';
+    display: block;
+    height: 10px;
+    border-top: 3px #E9E1CE solid;
+    border-bottom: 1px #E9E1CE solid;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.btn-default{
+    background: #E9E1CE;
+    font-family: "Codec Cold Trial News";
+    /*text-transform: uppercase;*/
+    border-radius: 0px;
+    margin-right: 100px;
+    color: #000;
+}
+/*///menu*/
+.dropbtn{
+    border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: #E9E1CE;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-menu a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-menu a:hover{
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown:hover .dropbtn{
+    /*background-color: #3e8e41;*/
+}
+.btn-plus{
+    margin-left: 20px;
+}
+
+a:hover{
+    color: #E9E1CE;
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 992px) {
-    .navbar-brand {
-        display: block
-    }
-    .nav-item.mx-5{
-        display: none;
+@media (min-width: 576px) {
+    .form-inline .form-control {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
     }
 }
-
-
-
-@media (max-width: 768px) {
-
-    .welcome .text span:nth-child(1){
-        font-size: 26px;
-        letter-spacing: 38px;
-    }
-    .welcome .text span:nth-child(2){
-        font-size: 86px;
-    }
-
-
-    .welcome .text span:nth-child(3) {
-        font-size: 24px;
-        letter-spacing: 17px;
-    }
-    .welcome .text span:nth-child(4) {
-        font-size: 67.647px;
-        position: relative;
-        top: -51px;
-        right: -44px;
-    }
-    .welcome .text {
-        position: absolute;
-        top: 21px;
-        left: 26px;
+@media (min-width: 576px) {
+    .mr-sm-2, .mx-sm-2 {
+        margin-right: .5rem !important;
     }
 }
-
-
-
-
-
-@media (max-width: 576px) {
-    .welcome .text span:nth-child(1){
-        font-size: 15px;
-        letter-spacing: 17px;
-    }
-    .welcome .text span:nth-child(2){
-        font-size: 37px;
-    }
-
-
-    .welcome .text span:nth-child(3) {
-        font-size: 14px;
-    }
-    .welcome .text span:nth-child(4) {
-        font-size: 49.647px;
-        position: relative;
-        top: -28px;
-        right: -92px;
-    }
-    .welcome .text {
-        top: 5px;
-        left: 12px;
-    }
-    .price-flower{
-        text-align: center;
-        margin-top: 10px;
-        margin-left: 0;
-    }
-}
-
-
-
-@media screen and (max-width: 400px){
-    .form-inline, .form-inline *{
-        display: block;
-        margin: 2px !important;
-        width: 100% !important;
-    }
-    .form-inline button{
-
-        border-radius: 10px;
-    }
-}
-
-
-
-
-
-

@@ -1,0 +1,104 @@
+.main-bg h1 {
+    text-align: center;
+    color: #d7659f;
+    padding: 40px 0;
+    font-family: "Mistral";
+    text-transform: uppercase;
+}
+.flowers .title a{
+    color: #000;
+    font-family: "Codec Cold Trial News";
+    font-weight: 700;
+}
+.flowers .in-stock, .product .in-stock{
+    color: #d7659f;
+    font-family: "Codec Cold Trial News";
+    font-size: 14px;
+}
+.flowers .out-stock{
+    color: #777;
+    font-family: "Codec Cold Trial News";
+    font-size: 14px;
+}
+.price{
+    font-family: "Codec Cold Trial News";
+
+}
+.price span{
+    font-weight: 700;
+    font-family: "Arial Narrow";
+    font-size: 22px;
+}
+.price-flower{
+    font-family: "Codec Cold Trial News";
+    margin-left: 230px;
+
+}
+.price-flower span{
+    font-weight: 700;
+    font-family: "Arial Narrow";
+    font-size: 22px;
+}
+
+.btn-buy, .btn-pink{
+    background:#E9E1CE;;
+    border: none;
+    color: #000;
+    font-family: "Codec Cold Trial News";
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.page-link{
+    background: transparent;
+    outline: none;
+    border: none
+}
+.page-link:hover{
+    background: transparent;
+}
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: transparent;
+    border-color: #dee2e6;
+}
+.page-item.disabled .page-link.prev:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent #fff transparent transparent;
+}
+
+
+.page-item.disabled .page-link.next:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent  transparent transparent #fff;
+}
+
+.page-item .page-link.prev:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent #d7659f transparent transparent;
+}
+.page-item .page-link.prev:hover:before{
+    border-color: transparent #404f6e transparent transparent;
+}
+
+.page-link:focus{
+    box-shadow: none;
+}
+.page-item .page-link.next:before{
+    content:'';
+    display: block;
+    border: 20px solid;
+    border-color: transparent  transparent transparent #d7659f;
+}
+.page-item .page-link.next:hover:before {
+    border-color: transparent transparent transparent #404f6e;
+}

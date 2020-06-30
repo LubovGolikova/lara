@@ -15,11 +15,17 @@ Route::get('/', "HomeController@index");
 Route::get('/shop', "ShopController@index");
 Route::get('/flower/{id}', "ShopController@showProduct");
 Route::post('/add-box', "BoxController@addFlower");
+Route::post('/get-count-products', "BoxController@getCountProducts");
 Route::post('/remove-flower', "BoxController@removeFlower");
 Route::post('/remove-all', "BoxController@removeAll");
 Auth::routes();
 Route::get('/order', "OrderController@index");
 Route::post('/order/add', "OrderController@add");
+Route::post('/get-warehouses', "OrderController@getWarehouses");
+Route::post('/get-streets', "OrderController@getStreets");
+
+
+
 Route::get('/search', "HomeController@search");
 
 Route::get('/admin', "Admin\AdminController@index")->middleware(['auth', 'admin']);
@@ -27,3 +33,10 @@ Route::resource('/admin/flower', "Admin\FlowerController")->middleware(['auth', 
 Route::resource('/admin/order', "Admin\OrderController")->middleware(['auth', 'admin']);
 Route::get('/admin/order-item/{id}/edit', "Admin\OrderController@editOrderItem")->middleware(['auth', 'admin']);
 Route::put('/admin/order-item/{id}', "Admin\OrderController@saveOrderItem")->middleware(['auth', 'admin']);
+
+
+Route::get('/clear', function(){
+    Artisan::call('cache:clear');
+    Artisan::call('view:clear');
+    return 'Cache clear!';
+});

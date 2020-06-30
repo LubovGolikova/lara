@@ -27,13 +27,17 @@ class Box
     static function removeAll(){
         Session::forget("box");
         Session::forget("sum");
+        Session::forget("count");
     }
     static function changeQty($id, $qty){}
     static function sum(){
         $sum = 0;
+        $count = 0;
         foreach(Session::get('box') as $flower){
             $sum+= $flower['qty'] * $flower['price'];
+            $count+= $flower['qty'];
         }
         Session::put('sum', $sum);
+        Session::put('count',$count);
     }
 }
