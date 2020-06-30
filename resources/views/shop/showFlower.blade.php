@@ -3,7 +3,16 @@
 @section('content')
 
 <div class="box-main pb-3">
+<div class="container">
+    <div class="search-line py-3 fluid container d-flex flex-row justify-content-center align-items-center">
+    <form class="my-2 my-lg-0 col-lg-6  search form-inline" method="get" action="/search">
+        <input class="form-control mr-sm-2" name="s"  autocomplete="off" contenteditable="true" spellcheck="false" type="search" placeholder="Поиск" aria-label="Search">
+        <button class="btn btn-outline-green my-2 my-sm-0" type="submit">Найти</button>
+    </form>
+    </div>
 <div class="container main-bg product pb-5">
+
+
     <h1>{{$flower->name}}</h1>
     <div class="{{$flower->stock?'in':'out'}}-stock text-center">{{$flower->stock?'в наличии':'нет в наличии'}}</div>
 
@@ -51,5 +60,20 @@
         </div>
     </div>
  </div>
+ </div>
 </div>
+
+    {{--@foreach($flowers as $flower)--}}
+        {{--<div class="col-md-3">--}}
+            {{--<img src="{{$flower->getThumb()}}" class="img-fluid">--}}
+            {{--<div>--}}
+                {{--{{$flower->name}}<br>--}}
+                {{--{{$flower->stock?'в наличии':'нет в наличии'}}<br>--}}
+                {{--{{$flower->price}}<br>--}}
+                {{--<button class="btn btn-primary">Купить</button>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+     {{--@endforeach--}}
+
+
 @endsection

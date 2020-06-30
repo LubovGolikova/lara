@@ -21,7 +21,4 @@ class BoxController extends Controller
         Box::removeAll();
         return view('shop.box');
     }
-    function getCountProducts(){
-        return \Session::get('count') ? \Session::get('count') : 0;
-    }
 }
